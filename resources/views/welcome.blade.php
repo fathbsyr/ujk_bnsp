@@ -29,13 +29,14 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">Services</a></li>
-                    <li class="nav-item"><a href="/dashutama" class='btn btn-primary btn-sm px-4'>Dashboard</a></li>
+                    <li><a class='btn btn-primary btn-sm' id="dashboard-link">Dashboard</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Header-->
-    <header class="bg-dark py-5" style="background-image: url('https://img.lovepik.com/background/20211022/large/lovepik-blue-premium-technology-theme-background-image_401952328.jpg');">
+    <header class="bg-dark py-5"
+        style="background-image: url('https://img.lovepik.com/background/20211022/large/lovepik-blue-premium-technology-theme-background-image_401952328.jpg');">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
@@ -77,14 +78,18 @@
         <div class="container px-5 my-5">
             <div class="row gx-5">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-collection"></i></div>
                     <h2 class="h4 fw-bolder">Jasa AI</h2>
-                    <p>Membantu prompt terbaik untuk berbagai macam sistem ai, seperti ChatGPT, DALL-E, dan Stable Diffusion</p>
+                    <p>Membantu prompt terbaik untuk berbagai macam sistem ai, seperti ChatGPT, DALL-E, dan Stable
+                        Diffusion</p>
                 </div>
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i>
+                    </div>
                     <h2 class="h4 fw-bolder">Jasa Web Developer</h2>
-                    <p>Membantu masyarakat untuk membuat sebuah website yang sederhana dan mudah dipahami banyak orang</p>
+                    <p>Membantu masyarakat untuk membuat sebuah website yang sederhana dan mudah dipahami banyak orang
+                    </p>
                 </div>
             </div>
         </div>
@@ -102,8 +107,8 @@
                     <div class="card mb-4">
                         <div class="card-body p-4">
                             <div class="d-flex">
-                                <div class="flex-shrink-0"><i
-                                        class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i>
+                                </div>
                                 <div class="ms-4">
                                     <p class="mb-1">Thank you for putting together such a great product. We loved
                                         working with you and the whole team, and we will be recommending you to others!
@@ -117,8 +122,8 @@
                     <div class="card">
                         <div class="card-body p-4">
                             <div class="d-flex">
-                                <div class="flex-shrink-0"><i
-                                        class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i>
+                                </div>
                                 <div class="ms-4">
                                     <p class="mb-1">The whole team was a huge help with putting things together for
                                         our company and brand. We will be hiring them again in the near future for
@@ -217,6 +222,20 @@
             <p class="m-0 text-center text-white">Copyright &copy; TechNova {{ date('Y') }}</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('dashboard-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Selamat Datang!",
+                text: "Selamat Datang Di Dashboard!",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/dashutama';
+                }
+            });
+        });
+    </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -226,6 +245,7 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
